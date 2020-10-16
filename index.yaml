@@ -5,7 +5,7 @@ entries:
       category: Database
     apiVersion: v1
     appVersion: 11.9.0
-    created: "2020-10-16T20:27:32.552958+03:00"
+    created: "2020-10-16T20:47:14.442172+03:00"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -32,6 +32,22 @@ entries:
     - https://github.com/bitnami/bitnami-docker-postgresql
     - https://www.postgresql.org/
     urls:
-    - charts/postgresql-9.8.3.tgz
+    - https://wwtlf.github.io/userlist/charts/postgresql-9.8.3.tgz
     version: 9.8.3
-generated: "2020-10-16T20:27:32.548122+03:00"
+  userlist:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2020-10-16T20:47:14.438976+03:00"
+    dependencies:
+    - alias: pg
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.8.3
+    description: Otus 1.5 Homework
+    digest: cfee726b3f91d94ef2100bcbc76ca6a847587001d133d678693af50871a30bb3
+    name: userlist
+    type: application
+    urls:
+    - https://wwtlf.github.io/userlist/userlist-0.1.0.tgz
+    version: 0.1.0
+generated: "2020-10-16T20:47:14.434219+03:00"
