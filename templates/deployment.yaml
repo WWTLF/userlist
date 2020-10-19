@@ -39,11 +39,11 @@ spec:
               protocol: TCP
           livenessProbe:
             httpGet:
-              path: /health
+              path: /health/liveness
               port: http
           readinessProbe:
             httpGet:
-              path: /health
+              path: /health/readiness
               port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
@@ -68,6 +68,11 @@ spec:
                 secretKeyRef:
                   name: {{ include "userlist.fullname" . }}-secret
                   key: POSTGRES_PASSWORD
+            - name: "POSTGRESQL_DB"            
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ include "userlist.fullname" . }}-configmap
+                  key: POSTGRESQL_DB
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

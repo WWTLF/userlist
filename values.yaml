@@ -12,6 +12,7 @@ image:
   db:
     user: "dXNlcmxpc3RfdXNlcg=="
     password: "c3NZRjkrNXF1SFVqdlQ="
+    name: userlist
     port: 5432
 
 
