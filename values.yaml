@@ -6,9 +6,9 @@ replicaCount: 1
 
 image:
   repository: wwtlf/user_list
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "0.3"
+  tag: "latest"
   db:
     user: "dXNlcmxpc3RfdXNlcg=="
     password: "c3NZRjkrNXF1SFVqdlQ="
@@ -93,7 +93,7 @@ affinity: {}
 
 deploy_jobs:   
   - name: 'migrate'
-    image: 'wwtlf/user_list_migrate:0.10'
+    image: 'wwtlf/user_list_migrate:latest'
     command: "[\"/bin/sh\", \"migrate.sh\"]"
     activeDeadlineSeconds: 60
     hook: 'post-install,post-upgrade'
