@@ -13,5 +13,5 @@
 ```
 helm repo add wwtlf https://wwtlf.github.io/userlist
 helm repo update
-helm install otus userlist -f values.yaml  
+helm install otus wwtlf/userlist -f values.yaml  
 ```
