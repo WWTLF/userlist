@@ -14,11 +14,15 @@ image:
     password: "c3NZRjkrNXF1SFVqdlQ="
     name: userlist
     port: 5432
-
+    service:
+      nodePort: 30432
 
 pg:
   postgresqlPassword: "Skr7-ykSqPG_LTP"
   postgresqlDatabase: "userlist"
+  service:
+      type: NodePort
+      nodePort: 30432
 
 imagePullSecrets: []
 nameOverride: ""
