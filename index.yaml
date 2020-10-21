@@ -48,6 +48,6 @@ entries:
     name: userlist
     type: application
     urls:
-    - https://wwtlf.github.io/userlist/userlist-0.1.0.tgz
+    - https://wwtlf.github.io/userlist/userlist-0.1.1.tgz
     version: 0.1.0
 generated: "2020-10-16T20:47:14.434219+03:00"
