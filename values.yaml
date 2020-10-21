@@ -63,7 +63,7 @@ ingress:
   hosts:
     - host: arch.homework
       paths: [
-        "/otusapp/borisershov(/|$)(.*)"
+        "/otusapp/borisershov/api/v1(/|$)(.*)"
       ]
   tls: []
   #  - secretName: chart-example-tls
